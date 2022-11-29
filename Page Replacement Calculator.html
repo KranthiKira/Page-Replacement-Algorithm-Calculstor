@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagefault.css">
+    
+    <title>PAGE REPLACEMENT ALGORITHM CALCULATOR</title>   
+    <script src="jquery-3.6.1.js"></script>
+
+  
+</head>
+<body id="body">
+    <div id="cent">
+    <h1 style="text-align:center ;">Page Replacement Algorithm Calculator</h1>
+    <div class="main">
+    <div id="butonid" style="background-color:lightblue">
+        <button id="texthide0">Introduction</button>    
+        <button id="texthide">Click Here for Instructions</button>
+        <button id="texthide2">Other Problems</button>        
+        <button id="texthide1">About</button>
+    </div>
+    <div class="div1">
+        <div id="mydiv0" >
+            
+            <p style="text-align:center; color:rgb(9, 11, 9)"><b>Introduction</b></p>
+                <p><b>Page Fault:</b></p>
+
+                    <p>When the page referenced by the CPU is not found in the main memory, the situation is called Page Fault.</p>
+            
+                <p><b>Page Replacement Algorithms:</b></p>
+                
+                    <p>Page replacement algorithms are used to decrease the maximum number of page faults.</p>	
+        </div>
+            <div id="mydiv1"><hr>
+                <p style="text-align:center; color:rgb(16, 19, 16)"><b>Instructions</b></p>	
+                <ol>
+            <li>Type the number of frames.</li>
+            <li>Select page replacement algorithm</li>
+            <li>Click calculate!</li>
+            </ol>	
+                <p><b>Feedback:</b></p>
+                <p>Did you find an error or a bug? let me know and I try to fix it as soon as possible!</p>
+                <p>Use <a href="https://www.assistedcoding.eu/contact/">this form</a> to contact me</p>
+            </div>   
+
+            <div id="mydiv2"><hr>
+                <p style="text-align:center; color:rgb(9, 11, 9)"><b>Problems</b></p>
+                        <p><b>Tools</b></p>		
+                    <ol>                            
+                        <li>Makefile generator</li>
+                        <li>Just in time calculator (alpha)</li>
+                    </ol>	
+
+                    <p><b>Databases:</b></p>		
+                    <ol>                            
+                        <li>Database trainer</li>
+                    </ol>	
+
+                    <p><b>Information retrieval problems:</b></p>		
+                    <ol>                            
+                        <li>Information retrieval basics (SYSPRO 2018)</li>
+                    </ol>
+
+                    <p><b>Operating system problems:</b></p>		
+                    <ol>                            
+                        <li>Disc Scheduling</li>
+                        <li>Page replacement algorithms</li>
+                        <li>Process Scheduling</li>
+                    </ol>	
+
+                    <p><b>Networking problems:</b></p>	
+                    <ol>                            
+                        <li>Basic networking tutorial</li>
+                    </ol>	
+
+                    <p><b>MPI:</b></p>	
+                    <ol>                            
+                        <li>MPI tools</li>
+                    </ol>	
+
+                    <p><b>Cross science problems:</b></p>	
+                    <ol>                            
+                        <li>L.E.A.N. implementation (Tom Venuto)</li>
+                    </ol>	
+            </div>
+                <div id="mydiv3"><hr>
+                    <p style="text-align:center; color:rgb(14, 16, 14)"><b>About this solver</b></p>		
+                    <p>The solver is offered to you for free by <a href="https://www.assistedcoding.eu">https://www.assistedcoding.eu</a>.</p>
+                    <p>Since it is free, it has not been extensively debugged. By reporting bugs, you contribute to this service and as such, the results will be more accurate.</p>
+                    <p>You can find more information about the online solver <a href="https://www.assistedcoding.eu/2018/02/06/disk-scheduling-solver/">here.</a></p>
+                </div>
+    </div>
+    
+    <div class="div2">
+        <form name="myform" id="form-submit" action="" method="post">
+            <p style="font-size:20px">  No.Of Frames : </p>
+            <input type="number" class="input" name="frames"  value="4">
+            <p style="font-size:20px">  References : </p>
+            <input type="text" id="refer" class="input"  name="refer" pattern="[0-9]" title="Please Enter thr references without space and commas"   value="1 2 3 4 2 1 5 6 2 1 2 3 7 6 3 2 1 2 3 6">
+            <p style="font-size:20px">  Page Replacement Algorithm </p>
+        <div class="col-md-4" >
+            <select id="selec"  name="selector">
+                <option value="0" selected>First in First out (FIFO)</option>
+                <option value="1">Least recently used (LRU)</option>
+                <option value="2">Optimal (OPT)</option>    								
+            </select>
+        </div>
+        <br>
+    </form>
+
+    <button style="height:34px;width:200px"  onclick="solver()" id="btn">Build Algorithm  </button>
+
+    <div id="sol">
+        <div style="background-color:rgb(242, 242, 124)">
+        <u><h1 style="text-align:center" id="ab1"></h1></u>
+    <ul class="a">
+    <li><b><p  style="text-transform:uppercase;" id="ab2"></p></b></li>
+   <li><b><p style="text-transform:uppercase;"  id="ab3"></p></b></li>
+    <li><b> <p style="text-transform:uppercase;" id="ab"></p></b></li>
+    <li><b><p style="text-transform:uppercase;"  id="ab4"></p></b></li>
+    <li><b><p  style="text-transform:uppercase;" id="ab5"></p></b></li>
+    <li><b> <p  style="text-transform:uppercase;" id="ab6"></p></b></li>
+
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    <script src=pageFaultsFIFO.js></script>
+    <script src=pageFaultsLRU.js></script>
+    <script src="build algorithm.js">    </script>
+     <script src="showhide.js"></script>
+     <script src="optimal.js"></script>
+</body>
+</html>
